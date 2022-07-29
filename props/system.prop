@@ -1,3 +1,7 @@
+# Bluetooth
+persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
+
 # CNE
 persist.vendor.cne.feature=1
 
