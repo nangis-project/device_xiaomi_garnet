@@ -12,6 +12,7 @@ persist.radio.data_ltd_sys_ind=1
 persist.radio.data_con_rprt=1
 persist.radio.calls.on.ims=1
 persist.radio.VT_ENABLE=1
+persist.rcs.supported=1
 persist.vendor.data.mode=concurrent
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=33,33
