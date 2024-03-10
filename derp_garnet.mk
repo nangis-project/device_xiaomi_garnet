@@ -20,7 +20,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/garnet-miuicamera/products/miuic
 
 # Build
 TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
+EXTRA_UDFPS_ICONS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_NAME := derp_garnet
