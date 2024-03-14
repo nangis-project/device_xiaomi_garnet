@@ -183,7 +183,7 @@ class XiaomiGarnetUdfpsHander : public UdfpsHandler {
     }
 
     void onFingerDown(uint32_t x, uint32_t y, float /*minor*/, float /*major*/) {
-        LOG(INFO) << __func__ << "x: " << x << ", y: " << y;
+        LOG(DEBUG) << __func__ << "x: " << x << ", y: " << y;
         // Track x and y coordinates
         lastPressX = x;
         lastPressY = y;
@@ -193,13 +193,13 @@ class XiaomiGarnetUdfpsHander : public UdfpsHandler {
     }
 
     void onFingerUp() {
-        LOG(INFO) << __func__;
+        LOG(DEBUG) << __func__;
         // Ensure touchscreen is aware of the press state, ideally this is not needed
         setFingerDown(false);
     }
 
     void onAcquired(int32_t result, int32_t vendorCode) {
-        LOG(INFO) << __func__ << " result: " << result << " vendorCode: " << vendorCode;
+        LOG(DEBUG) << __func__ << " result: " << result << " vendorCode: " << vendorCode;
         if (result == FINGERPRINT_ACQUIRED_GOOD) {
             // Request to disable HBM already, even if the finger is still pressed
             disp_local_hbm_req req;
@@ -229,24 +229,24 @@ class XiaomiGarnetUdfpsHander : public UdfpsHandler {
     }
 
     void cancel() {
-        LOG(INFO) << __func__;
+        LOG(DEBUG) << __func__;
         enrolling = false;
 
         setFodStatus(FOD_STATUS_OFF);
     }
 
     void preEnroll() {
-        LOG(INFO) << __func__;
+        LOG(DEBUG) << __func__;
         enrolling = true;
     }
 
     void enroll() {
-        LOG(INFO) << __func__;
+        LOG(DEBUG) << __func__;
         enrolling = true;
     }
 
     void postEnroll() {
-        LOG(INFO) << __func__;
+        LOG(DEBUG) << __func__;
         enrolling = false;
 
         setFodStatus(FOD_STATUS_OFF);
