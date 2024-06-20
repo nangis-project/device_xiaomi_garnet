@@ -117,7 +117,8 @@ vendor.display.enable_optimize_refresh=0
 vendor.display.idle_time=0
 vendor.display.vds_allow_hwc=0
 
-# Dolby Atmos
+# Dolby
+ro.audio.spatializer_enabled=true
 ro.vendor.audio.dolby.dax.support=true
 ro.vendor.audio.dolby.eq.half=true
 ro.vendor.audio.dolby.surround.enable=true
