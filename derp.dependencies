@@ -1,0 +1,22 @@
+[
+  {
+    "repository"  : "nangis-project/device_xiaomi_garnet",
+    "target_path" : "device/xiaomi/garnet"
+  },
+  {
+    "repository"  : "nangis-project/device_xiaomi_garnet-kernel",
+    "target_path" : "device/xiaomi/garnet-kernel"
+  },
+  {
+    "repository"  : "nangis-project/vendor_xiaomi_garnet",
+    "target_path" : "vendor/xiaomi/garnet"
+  },
+{   
+    "repository"  : "nangis-project/vendor_xiaomi_garnet-miuicamera",
+    "target_path" : "vendor/xiaomi/garnet-miuicamera"
+},
+{
+    "repository"  : "nangis-project/hardware_xiaomi",
+    "target_path" : "hardware/xiaomi"
+}
+]
