@@ -8,29 +8,18 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Everest stuff.
-$(call inherit-product, vendor/everest/config/common_full_phone.mk)
+# Inherit some common PixelOS stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
-# Bootanimation
+# PixelOS Flag
 TARGET_BOOT_ANIMATION_RES = 1080
-
-#Pixel Charger
-USE_PIXEL_CHARGER := true
-
-# Everest Flag
-EVEREST_MAINTAINER := rmdn.
-EVEREST_BUILD_TYPE := OFFICIAL
-TARGET_SUPPORTS_BLUR := false
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
-WITH_GAPPS := true
-TARGET_INCLUDE_PIXEL_LAUNCHER := false
-TARGET_INCLUDE_LAUNCHER3 := true
 
-PRODUCT_NAME := everest_garnet
+PRODUCT_NAME := aosp_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

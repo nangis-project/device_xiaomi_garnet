@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/everest_garnet.mk
+    $(LOCAL_DIR)/aosp_garnet.mk
 
 COMMON_LUNCH_CHOICES := \
-    everest_garnet-user \
-    everest_garnet-userdebug \
-    everest_garnet-eng
+    aosp_garnet-ap2a-user \
+    aosp_garnet-ap2a-userdebug \
+    aosp_garnet-ap2a-eng

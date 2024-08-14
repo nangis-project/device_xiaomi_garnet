@@ -36,7 +36,7 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a76
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
@@ -77,7 +77,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/device_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/everest/config/device_framework_matrix.xml
+    vendor/aosp/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
 
@@ -111,8 +111,8 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    bootinfo.fingerprint=$(EVEREST_VERSION) \
-    swinfo.fingerprint=$(EVEREST_VERSION)
+    bootinfo.fingerprint=$(AOSP_VERSION) \
+    swinfo.fingerprint=$(AOSP_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -146,7 +146,7 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/mo
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # Partitions
--include vendor/everest/config/BoardConfigReservedSize.mk
+-include vendor/aosp/config/BoardConfigReservedSize.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
